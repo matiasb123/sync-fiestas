@@ -18,6 +18,5 @@ export const clients: Client[] = [
 ];
 
 export const featuredClientNames = [
-  "Mercado Libre", "McDonald's", "Toyota", "Shell", "Facebook", "Telecom",
-  "DHL", "Tenaris", "Farmacity", "HSBC", "ICBC", "Quilmes",
+  "Facebook", "McDonald's", "Toyota", "Shell", "DHL", "Tenaris", "Farmacity", "HSBC", "Quilmes",
 ];
