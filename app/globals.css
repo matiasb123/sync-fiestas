@@ -76,3 +76,19 @@
 :root .review-slots article footer b{color:#fff;font-size:11px}
 :root .review-slots article footer small,:root .review-slots article footer i{color:#d6d6d1}
 :root .google-proof strong,:root .google-proof small{color:#fff}
+
+/* Atmospheric hero video and colored client marks. */
+:root .hero{position:relative;display:block;isolation:isolate;background:#080808}
+:root .hero-copy{position:relative;z-index:2;max-width:680px}
+:root .hero-video{position:absolute;z-index:0;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:contrast(.78) saturate(.75) blur(.35px)}
+:root .hero-video-overlay{position:absolute;z-index:1;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.62) 55%,rgba(0,0,0,.48) 100%)}
+:root .featured-client-mark img,:root .client-mark img{filter:none!important}
+:root img[src*="facebook"]{filter:invert(34%) sepia(90%) saturate(1000%) hue-rotate(181deg) brightness(92%) contrast(92%)!important}
+:root img[src*="mcdonalds"]{filter:invert(76%) sepia(90%) saturate(780%) hue-rotate(356deg) brightness(104%) contrast(105%)!important}
+:root img[src*="shell"]{filter:invert(19%) sepia(96%) saturate(3095%) hue-rotate(347deg) brightness(92%) contrast(103%)!important}
+:root img[src*="toyota"]{filter:invert(16%) sepia(93%) saturate(3444%) hue-rotate(351deg) brightness(92%) contrast(98%)!important}
+:root img[src*="dhl"]{filter:invert(15%) sepia(98%) saturate(4383%) hue-rotate(355deg) brightness(93%) contrast(104%)!important}
+:root img[src*="hsbc"]{filter:invert(16%) sepia(99%) saturate(5101%) hue-rotate(350deg) brightness(87%) contrast(102%)!important}
+:root img[src*="volvo"]{filter:invert(18%) sepia(42%) saturate(1188%) hue-rotate(152deg) brightness(88%) contrast(92%)!important}
+:root .review-slots article footer small,:root .review-slots article footer i{display:none}
+@media(max-width:850px){:root .hero-video-overlay{background:rgba(0,0,0,.62)}:root .hero-copy{max-width:100%}}
