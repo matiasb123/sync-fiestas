@@ -189,3 +189,97 @@
   :root .sync-pillars article:nth-child(even){padding-left:0;border-left:0}
   :root .sync-pillars article{min-height:auto;padding:17px 0}
 }
+
+/* Curated client assets: preserve each official color treatment and only add a dark
+   field where the approved brand file is white by design. */
+:root .featured-client-mark img,
+:root .client-mark img,
+:root img[src*="facebook"],
+:root img[src*="mcdonalds"],
+:root img[src*="shell"],
+:root img[src*="toyota"],
+:root img[src*="dhl"]{filter:none!important}
+:root .featured-client-mark.dark-logo-mark,
+:root .client-mark.dark-logo-mark{background:#171717}
+:root .featured-client-mark.dark-logo-mark{border-color:#292929}
+:root .company-track{animation-duration:38s!important}
+@media(max-width:850px){:root .company-track{animation:none!important}}
+
+/* Lighter brand fields for the logos supplied in white. */
+:root .featured-client-mark.dark-logo-mark,
+:root .client-mark.dark-logo-mark{background:var(--violet)}
+:root .featured-client-mark.dark-logo-mark{border-color:#6840d9}
+
+/* Compact, consistent pictograms in the credibility ribbon. */
+:root .trust-icon{width:28px;height:28px;flex:none;fill:none;stroke:#111;stroke-width:2.25;stroke-linecap:round;stroke-linejoin:round}
+:root .trust-fixed .trust-icon{margin:0;color:#111}
+:root .trust-fixed .trust-icon path:last-child{fill:none}
+:root .trust-fixed .trust-icon:not(:first-child){color:#111}
+:root .trust-fixed p:last-child .trust-icon{fill:#111;stroke:#111}
+
+/* Technique is a visual proof of the operation, not a word-only inventory. */
+:root .tech{grid-template-columns:.85fr 1.15fr;gap:8vw;align-items:start}
+:root .tech-content{display:grid;gap:25px}
+:root .tech-media-grid{display:grid;grid-template-columns:1.45fr 1fr 1fr;gap:10px}
+:root .tech-media-grid figure{position:relative;margin:0;min-height:190px;background:#191919;overflow:hidden}
+:root .tech-media-grid img{width:100%;height:100%;min-height:190px;object-fit:cover;display:block;filter:contrast(.92) saturate(.88)}
+:root .tech-media-grid figure:first-child img{object-position:center}
+:root .tech-media-grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:18px 12px 10px;background:linear-gradient(transparent,rgba(0,0,0,.82));color:#fff;font-size:9px;font-weight:800;letter-spacing:.09em}
+:root .tech .tech-items{gap:7px}
+:root .tech .tech-items span{font-size:10px;padding:9px 11px;background:#fff}
+:root .tech-content>p{margin:0;max-width:500px;font-size:17px;line-height:1.35}
+@media(max-width:850px){
+  :root .credentials{overflow-x:auto;align-items:stretch}
+  :root .trust-fixed{display:flex!important;flex-direction:row!important;width:max-content;min-width:100%;padding:0!important}
+  :root .trust-fixed p{flex:0 0 auto!important;width:auto!important;min-height:68px!important;justify-content:flex-start!important;padding:15px 18px!important;border-bottom:0!important;border-right:1px solid rgba(17,17,17,.22)!important;gap:7px!important}
+  :root .trust-fixed b{font-size:14px!important}
+  :root .trust-fixed small{font-size:10px!important}
+  :root .trust-icon{width:23px;height:23px}
+  :root .tech{grid-template-columns:1fr}
+  :root .tech-content{gap:20px}
+  :root .tech-media-grid{grid-template-columns:1.35fr 1fr 1fr}
+  :root .tech-media-grid figure,:root .tech-media-grid img{min-height:145px}
+}
+@media(max-width:470px){
+  :root .trust-fixed p{min-height:63px!important;padding:13px 15px!important}
+  :root .trust-fixed b{font-size:12px!important}
+  :root .trust-fixed small{font-size:9px!important}
+  :root .tech-media-grid{gap:6px}
+  :root .tech-media-grid figure,:root .tech-media-grid img{min-height:122px}
+  :root .tech-media-grid figcaption{padding:14px 8px 7px;font-size:7px}
+}
+
+/* Integral capabilities, expressed as an editorial production grid rather than SaaS cards. */
+:root .ecosystem{background:#2b1853;color:#fff;padding-top:90px;padding-bottom:78px}
+:root .ecosystem .section-label{color:var(--lime)}
+:root .ecosystem-head{display:flex;justify-content:space-between;align-items:end;gap:8vw}
+:root .ecosystem h2{font-size:clamp(42px,5.1vw,72px);max-width:700px}
+:root .ecosystem h2 em{color:var(--lime)}
+:root .ecosystem-head>p{max-width:300px;margin:0 0 7px;color:#e2dcef;font-size:16px;line-height:1.35;font-weight:650}
+:root .ecosystem-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:55px;border-top:1px solid rgba(255,255,255,.28);border-left:1px solid rgba(255,255,255,.28)}
+:root .ecosystem-grid article{min-height:170px;padding:21px 24px 22px;border-right:1px solid rgba(255,255,255,.28);border-bottom:1px solid rgba(255,255,255,.28);display:flex;flex-direction:column}
+:root .ecosystem-grid b{font-size:11px;color:var(--lime);letter-spacing:.1em}
+:root .ecosystem-grid h3{font-size:20px;letter-spacing:-.04em;margin:32px 0 8px}
+:root .ecosystem-grid p{margin:0;max-width:265px;font-size:13px;line-height:1.35;color:#e1deeb}
+:root .ecosystem-signoff{margin:20px 0 0;color:var(--lime);font-size:13px;font-weight:800}
+
+/* Every logo is presented on the same clean white field. */
+:root .featured-logo-grid{background:#e5e1d8}
+:root .featured-client-mark,:root .client-mark,:root .featured-client-mark.dark-logo-mark,:root .client-mark.dark-logo-mark{background:#fff!important}
+:root .featured-client-mark.dark-logo-mark{border-color:#ddd9d0!important}
+:root .featured-client-mark img[src$="quilmes-color.png"]{max-height:39px}
+:root .client-mark img[src$="quilmes-color.png"]{max-height:27px}
+:root .featured-client-mark img[src$="colonia-express-color.png"]{max-height:31px}
+:root .client-mark img[src$="colonia-express-color.png"]{max-height:23px}
+@media(max-width:850px){
+  :root .ecosystem{padding-top:68px;padding-bottom:62px}
+  :root .ecosystem-head{display:grid;gap:24px}
+  :root .ecosystem-grid{grid-template-columns:1fr 1fr;margin-top:38px}
+  :root .ecosystem-grid article{min-height:150px;padding:18px}
+  :root .ecosystem-grid h3{margin-top:25px;font-size:18px}
+}
+@media(max-width:470px){
+  :root .ecosystem-grid{grid-template-columns:1fr}
+  :root .ecosystem-grid article{min-height:auto;padding:18px 0 18px 18px}
+  :root .ecosystem-grid h3{margin:18px 0 6px}
+}
