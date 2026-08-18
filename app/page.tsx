@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { clients, featuredClientNames } from "../src/data/clients";
+import { clients, featuredClientNames, marqueeClientNames } from "../src/data/clients";
 import { reviews } from "../src/data/reviews";
 
 const WHATSAPP = "5491168770400";
@@ -29,6 +29,7 @@ export default function Home() {
   const [form, setForm] = useState({ name: "", phone: "", email: "", event: "", date: "", zone: "", guests: "", message: "" });
   const update = (key: keyof typeof form, value: string) => setForm({ ...form, [key]: value });
   const featuredClients = clients.filter((client) => featuredClientNames.includes(client.name) && client.asset);
+  const marqueeClients = clients.filter((client) => marqueeClientNames.includes(client.name) && client.asset);
   const sendForm = (event: FormEvent) => {
     event.preventDefault();
     const rows = [
@@ -58,9 +59,9 @@ export default function Home() {
       <div className="hero-copy"><p className="eyebrow">SYNC / BUENOS AIRES</p><h1>Experiencias interactivas<br /><em>para eventos.</em></h1><p className="lead">Trivias personalizadas, conducción en vivo y DJ para hacer participar a todos.</p><p className="sublead">Podés sumarnos durante 45–90 minutos o dejar en nuestras manos el entretenimiento de toda la fiesta.</p><p className="hero-trust">Una nueva propuesta del equipo de Karaoken Shows.</p><div className="actions"><a className="button lime" href={general} target="_blank" rel="noreferrer">Consultar disponibilidad <Arrow /></a><a className="text-link" href="#como-funciona">Ver cómo funciona <span>↓</span></a></div></div>
     </section>
 
-    <section className="credentials" aria-label="Trayectoria del equipo detrás de SYNC"><div className="trust-ticker"><div className="trust-track">{Array.from({ length: 2 }, (_, loop) => <div className="trust-set" key={loop}><p><b>17 AÑOS</b><span>de experiencia en eventos</span></p><i aria-hidden="true">✦</i><p><b>+5.000 EVENTOS</b><span>realizados por nuestro equipo</span></p><i aria-hidden="true">✦</i><p><b>+290 RESEÑAS</b><span>en Google</span></p><i aria-hidden="true">✦</i></div>)}</div></div></section>
+    <section className="credentials" aria-label="Trayectoria del equipo detrás de SYNC"><div className="trust-fixed"><p><span aria-hidden="true">✦</span><b>17 AÑOS</b><small>de experiencia en eventos</small></p><p><span aria-hidden="true">●</span><b>+1.000 EVENTOS</b><small>corporativos y sociales</small></p><p><span aria-hidden="true">✦</span><b>+290 RESEÑAS</b><small>en Google</small></p></div></section>
 
-    <section className="proof section"><div><div className="section-label">EMPRESAS</div><h2>Empresas que confiaron<br /><em>en nuestro equipo.</em></h2><p>Durante nuestra trayectoria trabajamos en eventos para empresas y organizaciones de distintos rubros.</p></div><div><div className="featured-logo-grid" aria-label="Empresas que confiaron en nuestro equipo">{featuredClients.map((client) => <div className="featured-client-mark" key={client.name} title={client.name}><img src={client.asset} alt={client.name} loading="lazy" /></div>)}</div><div className="company-marquees" aria-label="Empresas que confiaron en nuestro equipo"><div className="company-track">{[...featuredClients, ...featuredClients].map((client, index) => <div className="client-mark" key={`a-${index}`} title={client.name}><img src={client.asset} alt={client.name} loading="lazy" /></div>)}</div></div></div></section>
+    <section className="proof section"><div><div className="section-label">EMPRESAS</div><h2>Empresas que confiaron<br /><em>en nuestro equipo.</em></h2><p>Durante nuestra trayectoria trabajamos en eventos para empresas y organizaciones de distintos rubros.</p></div><div><div className="featured-logo-grid" aria-label="Empresas que confiaron en nuestro equipo">{featuredClients.map((client) => <div className="featured-client-mark" key={client.name} title={client.name}><img src={client.asset} alt={client.name} loading="lazy" /></div>)}</div><div className="company-marquees" aria-label="Más empresas que confiaron en nuestro equipo"><div className="company-track">{[...marqueeClients, ...marqueeClients, ...marqueeClients, ...marqueeClients].map((client, index) => <div className="client-mark" key={`a-${index}`} title={client.name}><img src={client.asset} alt={client.name} loading="lazy" /></div>)}</div></div></div></section>
 
     <section className="sync-intro section"><div><p className="section-label">QUÉ ES SYNC</p><h2>Hacemos participar<br /><em>a todo el evento.</em></h2></div><div className="sync-intro-copy"><p>Combinamos trivias personalizadas, conducción en vivo, juegos y DJ para que los invitados dejen de mirar y empiecen a participar.</p><div className="sync-pillars"><article><b>TRIVIAS</b><span>Personalizadas para cada evento.</span></article><article><b>CONDUCCIÓN</b><span>Un host que guía y mantiene el ritmo.</span></article><article><b>JUEGOS</b><span>Dinámicas para hacer participar al grupo.</span></article><article><b>DJ</b><span>Música y operación integradas a la experiencia.</span></article></div></div></section>
 
