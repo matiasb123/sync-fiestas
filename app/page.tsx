@@ -55,7 +55,7 @@ export default function Home() {
     </header>
 
     <section id="inicio" className="hero">
-      <video className="hero-video" autoPlay muted loop playsInline aria-hidden="true"><source src="/sync-hero-v2.mp4" type="video/mp4" /></video><div className="hero-video-overlay" aria-hidden="true"></div>
+      <video className="hero-video" autoPlay muted loop playsInline aria-hidden="true"><source src="/sync-hero-v3.mp4" type="video/mp4" /></video><div className="hero-video-overlay" aria-hidden="true"></div>
       <div className="hero-copy"><p className="eyebrow">SYNC / BUENOS AIRES</p><h1>Experiencias interactivas<br /><em>para eventos.</em></h1><p className="lead">Trivias personalizadas, conducción en vivo y DJ para hacer participar a todos.</p><p className="sublead">Podés sumarnos durante 45–90 minutos o dejar en nuestras manos el entretenimiento de toda la fiesta.</p><p className="hero-trust">Una nueva propuesta del equipo de Karaoken Shows.</p><div className="actions"><a className="button lime" href={general} target="_blank" rel="noreferrer">Consultar disponibilidad <Arrow /></a><a className="text-link" href="#como-funciona">Ver cómo funciona <span>↓</span></a></div></div>
     </section>
 
