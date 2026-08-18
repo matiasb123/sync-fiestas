@@ -62,3 +62,17 @@
 :root .trivia em,:root .how em,:root .tech em,:root .proof em,:root .reviews em,:root .about em{color:var(--violet)}
 @media(max-width:850px){:root .proof,:root .reviews{padding-top:65px;padding-bottom:65px}:root .featured-logo-grid{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:4px}:root .featured-client-mark{min-height:66px;padding:14px}:root .featured-client-mark img{max-height:25px}:root .company-marquees{overflow-x:auto;scroll-snap-type:x mandatory}:root .company-track{animation:none}:root .client-mark{scroll-snap-align:start}}
 @media(max-width:470px){:root .featured-logo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}:root .featured-client-mark{min-height:62px}:root .reviews .review-slots{grid-template-columns:1fr}}
+
+/* Logo color and review legibility corrections. */
+:root .featured-client-mark img,:root .client-mark img{filter:none;opacity:1}
+:root .featured-client-mark{opacity:1}
+:root .reviews{background:#101010;color:#fff}
+:root .reviews .section-label{color:var(--lime)}
+:root .reviews h2{color:#fff}
+:root .reviews h2 em{color:var(--lime)}
+:root .reviews>div>p{color:#f1f1ee;font-size:16px;font-weight:600}
+:root .review-slots article{background:#1b1b1b;border:1px solid #5a5a5a}
+:root .review-slots p{color:#fff;font-size:14px;line-height:1.55;font-weight:500}
+:root .review-slots article footer b{color:#fff;font-size:11px}
+:root .review-slots article footer small,:root .review-slots article footer i{color:#d6d6d1}
+:root .google-proof strong,:root .google-proof small{color:#fff}
