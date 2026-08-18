@@ -7,9 +7,9 @@ export type Client = {
 export const clients: Client[] = [
   { name: "Facebook", asset: "/clients/facebook.svg" },
   { name: "Mercado Libre", asset: "/clients/mercadolibre.svg" }, { name: "McDonald's", asset: "/clients/mcdonalds.svg" }, { name: "Shell", asset: "/clients/shell.svg" },
-  { name: "Toyota", asset: "/clients/toyota.svg" }, { name: "Tenaris" }, { name: "Telecom", asset: "/clients/telecom.svg" }, { name: "DHL", asset: "/clients/dhl.svg" },
-  { name: "Farmacity" }, { name: "HSBC", asset: "/clients/hsbc.svg" }, { name: "ICBC", asset: "/clients/icbc.svg" }, { name: "Bank of China" },
-  { name: "Volvo", asset: "/clients/volvo.svg" }, { name: "Scania", asset: "/clients/scania.svg" }, { name: "Quilmes" }, { name: "Easy" },
+  { name: "Toyota", asset: "/clients/toyota.svg" }, { name: "Tenaris", asset: "/clients/tenaris.png" }, { name: "Telecom", asset: "/clients/telecom.svg" }, { name: "DHL", asset: "/clients/dhl.svg" },
+  { name: "Farmacity", asset: "/clients/farmacity.png" }, { name: "HSBC", asset: "/clients/hsbc.svg" }, { name: "ICBC", asset: "/clients/icbc.svg" }, { name: "Bank of China" },
+  { name: "Volvo", asset: "/clients/volvo.svg" }, { name: "Scania", asset: "/clients/scania.svg" }, { name: "Quilmes", asset: "/clients/quilmes.png" }, { name: "Easy" },
   { name: "Falabella" }, { name: "La Caja" }, { name: "Banco Provincia" }, { name: "Banco Ciudad" }, { name: "Banco Patagonia" },
   { name: "Bunge" }, { name: "Baker Hughes" }, { name: "AES" }, { name: "RE/MAX" }, { name: "Grant Thornton Argentina" },
   { name: "AppsFlyer" }, { name: "AVEVA" }, { name: "Roemmers" }, { name: "Hospital Italiano" }, { name: "Brinks" },
